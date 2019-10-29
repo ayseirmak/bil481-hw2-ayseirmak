@@ -46,6 +46,7 @@ public class MyAdvancedMathTest_PowerOfTwo_ParameterizedTest {
 	 */
 	@Test
 	public void testPowerOfTwoWithNormalCases() {
+	Assert.assertEquals("the power of two " + power + " ", result, mam.powerOfTwo(power));
 
 	}
 	

@@ -21,13 +21,13 @@ public class MyAdvancedMathTest {
 	 * whose methods we are testing in this class
 	 */
 	MyAdvancedMath mam ;
-	
+
 	/*
 	 * This is a constructor which is called 
 	 * when the MyAdvancedMathTest
 	 */
 	public MyAdvancedMathTest() {
-		
+		mam = new MyAdvancedMath();
 	}
 	
 	/*
@@ -36,6 +36,7 @@ public class MyAdvancedMathTest {
 	 */
 	@Test
 	public void test_add_normal() {
+	Assert.assertEquals("Adding 3+5 ",8,mam.add(3,5));
 		
 	}
 	
@@ -45,7 +46,7 @@ public class MyAdvancedMathTest {
 	 */
 	@Test
 	public void testAdd_shouldReturnZero() {
-
+   Assert.assertEquals("Adding 0+0 ",0,mam.add(0,0));
 	}
 	
 	/*
