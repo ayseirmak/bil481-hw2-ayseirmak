@@ -48,6 +48,19 @@ public class MyAdvancedMathTest {
 	public void testAdd_shouldReturnZero() {
    Assert.assertEquals("Adding 0+0 ",0,mam.add(0,0));
 	}
+	@Test (expected = IllegalArgumentException.class)
+    	public void testAddNegativeFirstInputs() {
+    	mam.add(-6,3);
+    	}
+    @Test (expected = IllegalArgumentException.class)
+        	public void testAddNegativeSecondInputs() {
+        	mam.add(6,-3);
+        	}
+    @Test (expected = IllegalArgumentException.class)
+        	public void testAddTooBigInputs() {
+        	mam.add(Integer.MAX_VALUE-3+2,3);
+        	}
+
 	
 	/*
 	 * A test case for the exceptions caused when

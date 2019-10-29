@@ -34,9 +34,16 @@ public class MyMathTest {
     public void testGetSignShouldReturnNegative() {
         String x = mm.checkSign(-5);
         assertThat(x, containsString("negative"));
-
     }
-    
+
+    @Test (expected = IllegalArgumentException.class)
+    	public void testGetSignShouldReturnNull() {
+    		mm.checkSign(0);
+    }
+     @Test
+        public void testReverseNumber(){
+            Assert.assertEquals(5,mm.reverseNumber(-5));
+     }
     
 }
 

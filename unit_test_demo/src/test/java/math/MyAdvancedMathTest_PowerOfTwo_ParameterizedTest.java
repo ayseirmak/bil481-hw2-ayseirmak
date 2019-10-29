@@ -26,29 +26,31 @@ public class MyAdvancedMathTest_PowerOfTwo_ParameterizedTest {
 	public int power;
 	@Parameter (value = 1) //Or just @Parameter(1)
 	public int result;
-	
-	MyAdvancedMath mam = new MyAdvancedMath();
-	
+	public MyAdvancedMath mam;
+
 	/*
 	 * The following method generates the input values 
 	 * for the tests. 
 	 */
 	@Parameters
 	public static Collection<Object[]> data() {
-		Object[][] data = new Object[][]{{2,4},{3,8},{4,16}};
+		Object[][] data = new Object[][]{{0,1},{2,4},{3,8},{4,16}};
 		
 		return Arrays.asList(data);
 	}
-	
 	/*
 	 * A unit test that is executed for each pair of 
 	 * parameters. 
 	 */
 	@Test
 	public void testPowerOfTwoWithNormalCases() {
+	mam = new MyAdvancedMath();
 	Assert.assertEquals("the power of two " + power + " ", result, mam.powerOfTwo(power));
 
 	}
+
+
+
 	
 }
 
