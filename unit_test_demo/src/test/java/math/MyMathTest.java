@@ -5,6 +5,8 @@ import org.junit.Test;
 import demo.junit_class_demo.math.MyMath;
 
 import org.junit.Assert;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.containsString;
 
 /**
  * An class that provides test cases for the 
@@ -20,7 +22,9 @@ public class MyMathTest {
 	 */
     @Test
     public void testGetSignShouldReturnPositive() {
-    	
+       String x = mm.checkSign(5);
+       assertThat(x, containsString("positive"));
+
     }
     
     /*
@@ -28,6 +32,8 @@ public class MyMathTest {
 	 */
     @Test
     public void testGetSignShouldReturnNegative() {
+        String x = mm.checkSign(-5);
+        assertThat(x, containsString("negative"));
 
     }
     
