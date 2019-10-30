@@ -37,7 +37,6 @@ public class MyAdvancedMathTest {
 	@Test
 	public void test_add_normal() {
 	Assert.assertEquals("Adding 3+5 ",8,mam.add(3,5));
-		
 	}
 	
 	/*
@@ -59,6 +58,7 @@ public class MyAdvancedMathTest {
     @Test (expected = IllegalArgumentException.class)
         	public void testAddTooBigInputs() {
         	mam.add(Integer.MAX_VALUE-3+2,3);
+
         	}
 
 	
@@ -96,7 +96,9 @@ public class MyAdvancedMathTest {
 	 */
 	@Test
 	public void test_reverseArray() {
-
+	int [] a ={1,2,3,4,};
+	MyMath mm = new MyMath();
+	mam.reverseArray(a,mm);
 	}
 	
 	/*
