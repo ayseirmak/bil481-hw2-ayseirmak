@@ -3,7 +3,7 @@ import java.io.File;
 import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Assert.*;
-import java.nio.file.Paths;
+import org.jfree.chart.JFreeChart;
 
 public class ChartIOTest {
 	
@@ -21,6 +21,10 @@ public class ChartIOTest {
 	public void test_readFile_SadPath() {
 		io.readFile("asdasfdzad");
 	}
-	
-	
+
+	@Test
+    	public void test_writeFile_happyPath() {
+
+    	}
+
 }
