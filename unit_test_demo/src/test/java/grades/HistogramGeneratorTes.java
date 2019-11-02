@@ -10,21 +10,9 @@ import org.jfree.chart.JFreeChart;
 public class HistogramGeneratorTes {
 
 
-  HistogramGenerator hg = new  HistogramGenerator((new ChartIO()));
-
-    @Rule
-     public TemporaryFolder testFolder = new TemporaryFolder();
-
-
 	@Test
-	public void test_generate_normal() {
-         hg.generateHistogram("grades.txt", "histogram.jpeg");
-
-	}
-	@Test
-    	public void test_calculate_frequency() {
-
-             hg.generateHistogram("grades.txt", "histogram.jpeg");
-
+    	public void test_generate_normal() {
+    	HistogramMain obj = new HistogramMain();
+        obj.main(new String[]{"Testing Histogram Generator Main"});
     	}
 }
