@@ -110,7 +110,12 @@ public class MyAdvancedMathTest {
 	 */
 	@Test
 	public void test_reverseArray_Mocking() {
-
+	int[] arr={1,2,3};
+	int[] arr_reverse={-1,-2,-3};
+	int[] test = mam.reverseArray(arr,new MyMath());
+	Assert.assertEquals(arr_reverse[0],test[0]);
+	Assert.assertEquals(arr_reverse[1],test[1]);
+	Assert.assertEquals(arr_reverse[2],test[2]);
 
 	}
 }

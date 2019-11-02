@@ -22,9 +22,9 @@ public class ChartIOTest {
 		io.readFile("asdasfdzad");
 	}
 
-	@Test
-    	public void test_writeFile_happyPath() {
-
+	@Test(expected = NumberFormatException.class)
+    	public void test_ReadFile_UnknownPath() {
+    	io.readFile("src/test/resources/grades_invalid.csv");
     	}
 
 }

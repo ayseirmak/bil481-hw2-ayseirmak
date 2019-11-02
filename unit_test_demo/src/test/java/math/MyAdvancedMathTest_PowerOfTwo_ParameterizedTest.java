@@ -49,6 +49,18 @@ public class MyAdvancedMathTest_PowerOfTwo_ParameterizedTest {
 
 	}
 
+	@Test(expected = IllegalArgumentException.class)
+    	public void testIllegalArgument() {
+    	mam = new MyAdvancedMath();
+    	mam.powerOfTwo(52);
+    	}
+
+
+    @Test(expected = IllegalArgumentException.class)
+        	public void testIllegalArgument2() {
+        	mam = new MyAdvancedMath();
+        	mam.powerOfTwo(-7);
+        	}
 
 
 	

@@ -21,5 +21,10 @@ public class HistogramGeneratorTes {
          hg.generateHistogram("grades.txt", "histogram.jpeg");
 
 	}
-	
+	@Test
+    	public void test_calculate_frequency() {
+
+             hg.generateHistogram("grades.txt", "histogram.jpeg");
+
+    	}
 }
